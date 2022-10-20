@@ -1,0 +1,37 @@
+<div id="tarjeta">
+  <div class="card mx-auto" style="width: 350px">
+    <img src="./assets/perro-hyundai.jpg" class="card-img-top" alt="" />
+    <div class="card-body">
+      <h1 class="card-title text-center">Boby Dog</h1>
+      <h5 class="card-title text-center">Edad: {{ edad }}</h5>
+      <p class="card-text text-center">Soy el Jefe mas perro de la empresa</p>
+
+      <h2 class="text-center">Hobbies</h2>
+      <!-- aca se usa la directiva ng for -->
+
+      <ul>
+        <li *ngFor="let item of hobbies">{{ item }}</li>
+      </ul>
+      <div id="buttons">
+        <button
+          (click)="incrementarEdad()"
+          type="button"
+          class="btn btn-success"
+        >
+          Aumentar Edad
+        </button>
+        <button (click)="disminuirEdad()" type="button" class="btn btn-danger">
+          Disminuir Edad
+        </button>
+      </div>
+      <br />
+      <div
+        *ngIf="edad >= 18"
+        class="alert alert-success text-center"
+        role="alert"
+      >
+        Apto para fiesta bien perrona
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+#tarjeta {
+    background-color: rgb(243, 243, 243);
+    padding: 1em;
+  }
+  #buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  

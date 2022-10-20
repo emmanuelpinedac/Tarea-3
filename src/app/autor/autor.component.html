@@ -1,0 +1,43 @@
+<div id="tarjeta">
+  <div class="card mx-auto" style="width: 350px">
+    <div id="foto" ><img *ngIf="mostrar==true"  src="./assets/author dog.png" class="card-img-top" alt="" /></div>
+    <div class="card-body">
+      <h1 class="card-title text-center">Author Dog</h1>
+      <h5 class="card-title text-center">Edad: {{ edad }}</h5>
+      <p class="card-text text-center">Soy un SmartDog</p>
+
+      <h2 class="text-center">Estudios</h2>
+
+      <ul>
+        <li *ngFor="let item of estudios">{{ item }}</li>
+      </ul>
+      <div id="buttons">
+
+        <button (click)="ocultarYmostrarFoto()" type="button" class="btn btn-primary">
+          Ocultar o Mostrar Imagen
+        </button>
+      </div>
+      <br />
+      <div id="buttons">
+        <button
+          (click)="incrementarEdad()"
+          type="button"
+          class="btn btn-success"
+        >
+          Aumentar Edad
+        </button>
+        <button (click)="disminuirEdad()" type="button" class="btn btn-danger">
+          Disminuir Edad
+        </button>
+      </div>
+      <br />
+      <div
+        *ngIf="edad >= 18"
+        class="alert alert-success text-center"
+        role="alert"
+      >
+        Apto para fiesta bien perrona
+      </div>
+    </div>
+  </div>
+</div>
