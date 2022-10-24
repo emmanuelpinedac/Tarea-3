@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'info', component: InfoComponent },
   { path: 'autor', component: AutorComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
